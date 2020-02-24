@@ -1,12 +1,24 @@
-﻿using System;
-
-namespace PalindromeVerificationApp
+﻿namespace PalindromeVerificationApp
 {
+    using System;
+
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Please Insert String: ");
+
+            var palindromeVerificator = new PalindromeVerificator();
+
+            var consoleInput = Console.ReadLine();
+
+            var isStringPalindrome = palindromeVerificator.IsPalindrome(consoleInput);
+
+            Console.WriteLine(isStringPalindrome
+                ? $"{consoleInput} is a Palindrome"
+                : $"{consoleInput} is not a Palindrome");
+
+            Console.ReadKey(true);
         }
     }
 }
